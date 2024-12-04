@@ -60,3 +60,18 @@ export default function HomePage() {
     </div>
   );
 }
+{/* Search */}
+<Link href="/search" legacyBehavior>
+  <a className="flex items-center bg-gray-700 text-white p-3 rounded-md shadow-lg hover:bg-blue-500 transition">
+    <span className="text-xl mr-2">🔍</span>
+    <span className="text-sm">Search</span>
+  </a>
+</Link>
+{/* Current Location */}
+<Link href="/current-location" legacyBehavior>
+  <a className="flex items-center bg-gray-700 text-white p-3 rounded-md shadow-lg hover:bg-blue-500 transition">
+    <span className="text-xl mr-2">📍</span>
+    <span className="text-sm">Current Location</span>
+  </a>
+</Link>
+
