@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export default function CurrentWeather() {
   const [weatherData, setWeatherData] = useState(null);
@@ -49,27 +50,26 @@ export default function CurrentWeather() {
         <h1 className="text-4xl font-bold mt-10 mb-6">Weather in Calgary</h1>
         <div className="bg-white text-black p-6 rounded-lg shadow-md max-w-md w-full">
           <h2 className="text-2xl font-semibold mb-4">
-            {weatherData?.name}JATT FORECAST PRESENTS {weatherData?.sys?.country}
+            {weatherData?.name} JATT FORECAST PRESENTS {weatherData?.sys?.country}
           </h2>
           <p className="text-lg">
-            <strong>Temperature: -20</strong> {weatherData?.main?.temp}°C
+            <strong>Temperature:</strong> {weatherData?.main?.temp}°C
           </p>
           <p className="text-lg">
-            <strong>Weather: MOSTLY CLOUDY</strong> {weatherData?.weather?.[0]?.description}
+            <strong>Weather:</strong> {weatherData?.weather?.[0]?.description}
           </p>
           <p className="text-lg">
-            <strong>Humidity: 17</strong> {weatherData?.main?.humidity}%
+            <strong>Humidity:</strong> {weatherData?.main?.humidity}%
           </p>
           <p className="text-lg">
-            <strong>Wind Speed: 20</strong> {weatherData?.wind?.speed} m/s
+            <strong>Wind Speed:</strong> {weatherData?.wind?.speed} m/s
           </p>
         </div>
-        <a
-          href="/"
-          className="mt-10 text-yellow-400 underline text-lg hover:text-yellow-300"
-        >
-          Back to Home
-        </a>
+        <Link href="/" legacyBehavior>
+          <a className="mt-10 text-yellow-400 underline text-lg hover:text-yellow-300">
+            Back to Home
+          </a>
+        </Link>
       </div>
 
       {/* Animation Styles */}

@@ -64,12 +64,11 @@ export default function AssignmentsPage() {
               </span>
             </p>
             {/* Back to Main Home Page */}
-            <a
-              href="/"
-              className="text-sm font-medium text-yellow-400 hover:underline block text-center"
-            >
-              Back to Home
-            </a>
+            <Link href="/" legacyBehavior>
+              <a className="text-sm font-medium text-yellow-400 hover:underline block text-center">
+                Back to Home
+              </a>
+            </Link>
           </div>
         </div>
       </div>
