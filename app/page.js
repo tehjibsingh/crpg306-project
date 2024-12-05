@@ -68,7 +68,7 @@ export default function HomePage() {
   </a>
 </Link>
 {/* Current Location */}
-<Link href="/current-location" legacyBehavior>
+<Link href="/location" legacyBehavior>
   <a className="flex items-center bg-gray-700 text-white p-3 rounded-md shadow-lg hover:bg-blue-500 transition">
     <span className="text-xl mr-2">📍</span>
     <span className="text-sm">Current Location</span>
