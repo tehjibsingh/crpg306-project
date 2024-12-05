@@ -28,11 +28,11 @@ export default function CurrentWeather() {
       className="min-h-screen bg-cover bg-center relative"
       style={{
         backgroundImage:
-          "url('https://files.oaiusercontent.com/file-EXaiZZjiWDQVwvc6mC4rLL?se=2024-12-04T23%3A09%3A56Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D1bad2d54-6779-4528-ad14-c46555cb6be2.webp&sig=YCAVd3Spd90VULTuF0TrGCRfl3k%2BRfdxJZB9WDdEjqg%3D')",
+          "url('https://wallpaperaccess.com/full/5639686.jpg')",
       }}
     >
       {/* News Ticker Animation */}
-      <div className="absolute top-0 w-full bg-yellow-400 text-black py-2">
+      <div className="absolute top-0 w-full bg-yellow-00 text-black py-2">
         <div className="flex overflow-hidden whitespace-nowrap animate-marquee">
           <p className="text-sm font-semibold px-4">
             Breaking News: Current temperature in Calgary is{" "}
@@ -45,7 +45,7 @@ export default function CurrentWeather() {
       </div>
 
       {/* Main Weather Content */}
-      <div className="flex flex-col items-center text-white bg-gray-400 bg-opacity-75 min-h-screen p-6">
+      <div className="flex flex-col items-center text-white bg-gray-00 bg-opacity-75 min-h-screen p-6">
         <h1 className="text-4xl font-bold mt-10 mb-6">Weather in Calgary</h1>
         <div className="bg-white text-black p-6 rounded-lg shadow-md max-w-md w-full">
           <h2 className="text-2xl font-semibold mb-4">

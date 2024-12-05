@@ -1,57 +1,34 @@
-"use client";
+import Link from 'next/link'; // Import the Link component
 
-import { useState, useEffect } from "react";
-
-export default function CurrentWeather() {
-  const [weatherData, setWeatherData] = useState(null);
-  const API_KEY = "YOUR_OPENWEATHER_API_KEY"; // Replace with your API key
-
-  useEffect(() => {
-    fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=Calgary&units=metric&appid=${API_KEY}`
-    )
-      .then((response) => response.json())
-      .then((data) => setWeatherData(data))
-      .catch((error) => console.error("Error fetching weather data:", error));
-  }, []);
-
-  if (!weatherData) {
-    return (
-      <div className="flex items-center justify-center min-h-screen bg-gray-0 text-white">
-        <h1>Loading Weather Data...</h1>
-      </div>
-    );
-  }
-
+export default function WeatherPage() {
   return (
     <div
-      className="min-h-screen bg-cover bg-center relative"
+      className="flex flex-col items-center text-white bg-gray-00 bg-opacity-75 min-h-screen p-6"
       style={{
-        backgroundImage:
-          "url('https://wallpaperaccess.com/full/5639686.jpg')",
+        backgroundImage: 'url("https://wallpaperaccess.com/full/5639686.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
       }}
     >
-      {/* News Ticker Animation */}
-      <div className="absolute top-0 w-full bg-yellow- text-black py-2">
-   
-      </div>
-
-      {/* Main Weather Content */}
-      <div className="flex flex-col items-center text-white bg-gray-00 bg-opacity-75 min-h-screen p-6">
-        <h1 className="text-4xl font-bold mt-10 mb-6">Calgary</h1>
-        <div className="bg-white text-black p-6 rounded-lg shadow-md max-w-md w-full">
-          
-        </div>
-        <a
-          href="/"
-          className="mt-10 text-yellow-400 underline text-lg hover:text-yellow-300"
+      {/* Page Title */}
+      <h1 className="text-4xl font-bold mt-10 mb-6">Calgary</h1>
+      
+      {/* White Box */}
+      <div className="bg-white text-black p-6 rounded-lg shadow-md max-w-md w-full">
+        {/* Button inside the white box */}
+        <Link 
+          href="/current-weather" 
+          className="flex items-center bg-gray-700 text-white p-3 rounded-md shadow-lg hover:bg-blue-500 transition"
         >
-          Back to Home
-        </a>
+          <span className="text-xl mr-2">🌤️</span>
+          <span className="text-sm">Current Weather</span>
+        </Link>
       </div>
-
       
-      
+      {/* Back to Home Link */}
+      <Link href="/" className="mt-10 text-yellow-400 underline text-lg hover:text-yellow-300">
+        Back to Home
+      </Link>
     </div>
   );
 }
